@@ -2,6 +2,9 @@ package com.first.lesson8;
 
 public class Cat {
 
+    public Cat() {
+    }
+
     public  String name;
     public  String gen;
     public  String breed;
@@ -14,6 +17,6 @@ public class Cat {
 
     @Override
     public String toString() {
-        return name + " " + gen +" "+ breed + " " + flag;
+        return name + " " + gen;
     }
 }

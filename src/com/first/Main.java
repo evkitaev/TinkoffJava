@@ -1,14 +1,15 @@
 package com.first;
 
-import com.first.com.second.SecondClass;
+/* Создать класс Cat, добавить поля имя, пол, порода, флаг (в котокафе или дома) и тд.
+Добавить конструктор в класс несколько конструкторов (все поля заполняются по умолчанию,
+указываем только имя и пол, указываем все поля). Пустых полей быть не должно.*/
+
 import com.first.lesson8.Cat;
-
-import java.sql.SQLOutput;
-
+import com.first.lesson8.CatCafe;
 
 public class Main {
     public static void main(String args []) {
-        Cat cat = new Cat("Игорь", "Пржевальского");
+        Cat cat = new Cat("Игорь", "кот Пржевальского");
 
         System.out.println(cat);
 
