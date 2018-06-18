@@ -6,10 +6,8 @@ package com.first.lesson8;
 
 public class CatCafe {
     String  address;
-    String[] cafecats;  //Cat[] cafecats
-    // cafecats[0] = new 
+    String[] cafecats;
     int time;
-    //String time;
     int catcount;
 
     public CatCafe(String address, String[] cafecats, int time, int catcount) {
