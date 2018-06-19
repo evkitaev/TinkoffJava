@@ -4,16 +4,14 @@ package com.first.lesson8;
 Добавить в класс несколько конструкторов (все поля заполняются по умолчанию, указываем только имя и пол, указываем все поля).
 Пустых полей быть не должно.*/
 
-import java.sql.SQLOutput;
-
 public class Cat {
 
-    public  String name;
-    public  String gen;
-    public  String breed;
-    public  boolean flag; //true = в котокафе, false = дома
+    public String name;
+    public String gen;
+    public String breed;
+    public boolean flag; //true = дома, false = в котокафе
 
-    public Cat (){
+    public Cat() {
         this.name = "Мяотик";
         this.gen = "Кот";
         this.breed = "Обессин";
@@ -25,8 +23,6 @@ public class Cat {
         this.gen = gen;
         this.breed = breed;
         this.flag = flag;
-
-
     }
 
     public Cat(String name, String gen) {
@@ -36,16 +32,21 @@ public class Cat {
         this.flag = false;
     }
 
-    public String flag1 (boolean flag){
+    public String getLocation(boolean flag) {
         if (flag = true)
             return "дома";
-            else
-                return "котокафе";
+        else
+            return "котокафе";
+
 
     }
 
+    public void takeHome() {
+        this.flag = true
+    }
+
     @Override
-public String toString() {
-    return name + " " + gen + " " + breed + " " + flag;
-}
+    public String toString() {
+        return name + " " + gen + " " + breed + " " + flag;
+    }
 }
