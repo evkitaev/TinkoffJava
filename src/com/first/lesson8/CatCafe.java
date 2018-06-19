@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class CatCafe {
     static String address = "улица Мурзика";
     static Cat[] cafeCats;
-    static String time = "09.00 - 18.00";
+    static String time = "09.00 - 21.00";
     static int catCount;
 
     public CatCafe(String address, Cat[] cafeCats, String time, int catCount) {

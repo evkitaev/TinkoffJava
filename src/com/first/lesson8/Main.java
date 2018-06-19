@@ -4,7 +4,7 @@ package com.first.lesson8;
 
 public class Main {
 
-    static CatCafe Cafe = new CatCafe("",cafeCats, "09-18", 4);
+    static CatCafe Cafe = new CatCafe("",cafeCats, "09-19", 4);
     static Cat[] catsArray = new Cat[3];
     public static void main (String [] args){
         catsArray = cafeCats;
