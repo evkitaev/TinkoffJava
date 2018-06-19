@@ -14,7 +14,7 @@ public class Cat {
     public Cat() {
         this.name = "Мяотик";
         this.gen = "Кот";
-        this.breed = "Обессин";
+        this.breed = "Абессин";
         this.flag = false;
     }
 
