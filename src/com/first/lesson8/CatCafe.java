@@ -1,23 +1,31 @@
 package com.first.lesson8;
 
+import java.util.Arrays;
+/*Создать класс CatCafe, добавить поля адрес, массив котов в котокафе и время работы и счетчик котов.
+Добавить конструктор класса. Создать объект кафе и добавить в него котов. Всем котам проставить флаг.*/
+
 public class CatCafe {
     static String address = "улица Мурзика";
-    static Cat[] cafeCats = new Cat [3];
-    static int time = 12;
+    static Cat[] cafeCats;
+    static String time = "09.00 - 18.00";
     static int catCount;
-     public static void main (String [] args){
-         cafeCats[0] = new Cat ("Игорь", "Кот", "");
-         cafeCats[1] = new Cat ("Светлана", "кошка", "в котокафе");
-         cafeCats[2] = new Cat ("Иванович","кот","в котокафе");
-         System.out.println(cafeCats);
-     }
-    public CatCafe(String address, Cat[] cafeCats, int time, int catCount) {
+
+    public CatCafe(String address, Cat[] cafeCats, String time, int catCount) {
         this.address = address;
         this.time = time;
         this.catCount = catCount;
         this.cafeCats = cafeCats;
 
     }
+    @Override
+    public String toString() {
+        return address + " " + cafeCats + " " + " " + time + " " + catCount;
 
+    }
 
 }
+
+
+
+
+
