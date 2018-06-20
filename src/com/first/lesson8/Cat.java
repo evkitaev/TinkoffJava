@@ -32,21 +32,22 @@ public class Cat {
         this.flag = false;
     }
 
-    public String getLocation(boolean flag) {
-        if (flag = true)
+    private String getLocation(boolean flag) {
+        if (flag = true) {
             return "дома";
-        else
+        }
+        else {
             return "котокафе";
-
-
+        }
     }
 
     public void takeHome() {
-        this.flag = true
+        this.flag = false;
+
     }
 
     @Override
     public String toString() {
-        return name + " " + gen + " " + breed + " " + flag;
+        return "Кличка: " + name + ", " + gen + ", " + "Порода: " + breed + ", " + "Местонахождение: " + getLocation(flag);
     }
 }
