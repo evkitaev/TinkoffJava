@@ -4,14 +4,20 @@ package com.first.lesson8;
 
 public class Main {
 
-    static CatCafe Cafe = new CatCafe("",cafeCats, "09-19", 4);
-    static Cat[] catsArray = new Cat[3];
+
     public static void main (String [] args){
-        catsArray = cafeCats;
-        cafeCats[0] = new Cat ("Иванович", "кот", "Абессин",true);
-        cafeCats[1] = new Cat ("Светлана", "кошка", "Сибирская",true);
-        cafeCats[2] = new Cat ("Леонид", "кот", "Манчкин",true);
-        cafeCats[3] = new Cat ("Татьяна", "кошка", "Обессин",true);
+        Cat[] catsArray = new Cat[4];
+        catsArray[0] = new Cat ("Иванович", "кот", "Абессин",true);
+        catsArray[1] = new Cat ("Светлана", "кошка", "Сибирская",true);
+        catsArray[2] = new Cat ("Леонид", "кот", "Манчкин",true);
+        catsArray[3] = new Cat ("Татьяна", "кошка", "Обессин",true);
+        CatCafe cafe = new CatCafe("",catsArray, "09-19");
+
+        System.out.println(cafe.toString());
+
+
+
+        //System.out.println(Arrays.toString(cafe));
 
     }
 
