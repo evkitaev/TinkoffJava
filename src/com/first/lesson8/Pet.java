@@ -2,6 +2,7 @@ package com.first.lesson8;
 
 
 public class Pet extends Animal {
+    //В класс Pet перенести поля имя и возраст из класса Cat и добавить поле владелец.
     public String name; //поле имя - всем классам
     protected int age; //поля возраст только дочерним классам
     private String owner; //поле владелец должно быть доступно только классу Pet

@@ -29,6 +29,10 @@ public class Main {
            System.out.println("\n" + lynx);
            lynx.speak("Я рысь, прыгаю ввысь!");
 
+           dog.info();
+
+           //при выводе типа животного возможно имелось ввиду ввывод имени класса?
+
 
 
 
