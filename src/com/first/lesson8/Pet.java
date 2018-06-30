@@ -5,11 +5,12 @@ public class Pet extends Animal {
     //В класс Pet перенести поля имя и возраст из класса Cat и добавить поле владелец.
     public String name; //поле имя - всем классам
     protected int age; //поля возраст только дочерним классам
-    private String owner; //поле владелец должно быть доступно только классу Pet
+    /*private String owner; //поле владелец должно быть доступно только классу Pet*/
+    private String type; //поле владелец должно быть доступно только классу Pet
+   String person;
 
-    //Для всех полей добавить геттеры и сеттеры.
-    public String getOwner() {
-        return owner;
+    public String getType() {
+        return type;
     }
 
     public String getName() {
@@ -28,15 +29,11 @@ public class Pet extends Animal {
         this.age = age;
     }
 
-    public void setOwner(String owner) {
-        this.owner = owner;
-    }
-
-    public Pet(String name, int age, String owner) {
+    public Pet(String name, int age, String type, String person) {
         this.name = name;
         this.age = age;
-        this.owner = owner;
-
+        this.type = "Домашнее животное";
+        this.person = person;
     }
 
     public Pet() {
@@ -45,12 +42,9 @@ public class Pet extends Animal {
     //В классе Pet в методе speak() дополнительно добавить на вывод в консоль кличку животного.
     @Override
     public void speak(String say) {
-        if (getName() == null) {
-            System.out.println(getType() + " говорит: " + say); //на случай, если мы не знаем клички)
-        } else {
-            System.out.println(getName() + " говорит: " + say);
+            System.out.println(getName() + " говорит: " + say + "\n");
         }
     }
-}
+
 
 

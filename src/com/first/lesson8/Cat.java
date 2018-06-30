@@ -7,10 +7,11 @@ package com.first.lesson8;
 import java.text.MessageFormat;
 
 public class Cat extends Pet {
-    private String type;
     private String gen;
     private String breed;
     private boolean flag; //true = дома, false = в котокафе
+    private Person person = new Person ("Екатерина");
+    Wild wild;
 
     //Для всех полей добавить геттеры и сеттеры.
     public String getGen() {
@@ -37,47 +38,39 @@ public class Cat extends Pet {
         this.flag = flag;
     }
 
-    public String getType() {
-        return type;
+    public Person getPerson() {
+        return person;
     }
 
-    public void setType(String breed) {
-        this.type = type;
-    }
-
-
-    public Cat (String name, String gen, String breed, int age, boolean flag, String owner){
-        super(name, age, owner);
-        this.type = "Домашний кот";
+    public Cat(String type, String name, int age, String personName, String gen, String breed, boolean flag) {
+        super(name, age, type, personName);
         this.gen = gen;
         this.breed = breed;
         this.flag = flag;
-
     }
 
     private String getLocation(boolean flag) {
         if (flag) {
             return "дома";
-        }
-        else {
+        } else {
             return "котокафе";
         }
     }
 
     public void takeHome() { //Создать класс Person. В классе Cat при взятии кошки домой заполнять поле владелец.
         this.flag = true;
-        setOwner("Домовой"); //set или get?
+        System.out.println("Владелец: " + getPerson()); //проставление владельца, при заборе домой
 
     }
 
-   @Override
-    public String toString() {
-        if (flag){
-        return MessageFormat.format("\nТип: {0}, Кличка: {1}, {2}, Порода: {3}, Возраст: {4}, Местонахождение: {5}, Владелец: {6}", getType(), getName(), gen, breed, getAge(), getLocation(flag), getOwner());
-        }
-        else {
-            return MessageFormat.format("\nКличка: {0}, {1}, Порода: {2}, Возраст: {3}, Местонахождение: {4}, Владелец отсутствует", getName(), gen, breed, getAge(), getLocation(flag));
-        }
+    @Override
+    public void info() {
+        if (flag)
+            System.out.println("Тип: " + getType() + ", " + "Кличка: " + getName() + ", "+ "Порода: " + getBreed() + ", " + "Возраст: " + getAge() + ", " + "сейчас " + getLocation(flag));
 
-   }
+        else
+            System.out.println("Тип: " + /*wild.*/getType() + ", " + "Порода: " + getBreed() + ", " + "Возраст: " + getAge() + ", " + "Владелец отсутствует," + " сейчас в " + getLocation(flag) + "\n");
+        //как сделать так, чтобы при флаге в котокафе, у нас проставлялся тип из класса Wild (дикое животное, вместо домашнего)? Или здесь уже интефейсами нужно обходиться?
+
+    }
 }
