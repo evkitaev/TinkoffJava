@@ -1,11 +1,6 @@
 package com.first.lesson8;
 
-        import java.util.Arrays;
-
-        import static com.first.lesson8.CatCafe.*;
-
 public class Main {
-   static Wild wild;
 
        public static void main (String [] args){
 
@@ -14,7 +9,7 @@ public class Main {
            cat.info();
            cat.speak("Люблю тыгыдыкать по ночам!");
 
-        Cat cat1 = new Cat ("","",9,"","кот", "Сибирский",false);
+        Cat cat1 = new Cat ("", "", 6, "", "кот", "Сибирский", false);
            cat1.info();
 
         Dog dog = new Dog ("Виктор",5,"","Евгений", "Мопс");

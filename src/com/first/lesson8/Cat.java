@@ -18,26 +18,9 @@ public class Cat extends Pet {
         return gen;
     }
 
-    public void setGen(String gen) {
-        this.gen = gen;
-    }
-
     public String getBreed() {
         return breed;
     }
-
-    public void setBreed(String breed) {
-        this.breed = breed;
-    }
-
-    public boolean isFlag() {
-        return flag;
-    }
-
-    public void setFlag(boolean flag) {
-        this.flag = flag;
-    }
-
     public Person getPerson() {
         return person;
     }
@@ -69,7 +52,7 @@ public class Cat extends Pet {
             System.out.println("Тип: " + getType() + ", " + "Кличка: " + getName() + ", "+ "Порода: " + getBreed() + ", " + "Возраст: " + getAge() + ", " + "сейчас " + getLocation(flag));
 
         else
-            System.out.println("Тип: " + /*wild.*/getType() + ", " + "Порода: " + getBreed() + ", " + "Возраст: " + getAge() + ", " + "Владелец отсутствует," + " сейчас в " + getLocation(flag) + "\n");
+            System.out.println("Тип: " + Wild.type + ", " + "Порода: " + getBreed() + ", " + "Пол: " + getGen() + ", " + "Возраст: " + getAge() + ", " + "Владелец отсутствует," + " сейчас в " + getLocation(flag) + "\n");
         //как сделать так, чтобы при флаге в котокафе, у нас проставлялся тип из класса Wild (дикое животное, вместо домашнего)? Или здесь уже интефейсами нужно обходиться?
 
     }

@@ -5,9 +5,6 @@ import java.text.MessageFormat;
 public class Dog extends Pet{
     private String breed;
 
-    //Для всех полей добавить геттеры и сеттеры.
-
-
     public Dog(String name, int age, String type, String person, String breed) {
         super(name, age, type, person);
         this.breed = breed;
@@ -19,6 +16,9 @@ public class Dog extends Pet{
 
     public void setBreed(String breed) {
         this.breed = breed;
+    }
+
+    public Dog() {
     }
 
     @Override

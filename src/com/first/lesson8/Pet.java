@@ -1,12 +1,11 @@
 package com.first.lesson8;
 
 
-public class Pet extends Animal {
+public abstract class Pet extends Mammal {
     //В класс Pet перенести поля имя и возраст из класса Cat и добавить поле владелец.
     public String name; //поле имя - всем классам
     protected int age; //поля возраст только дочерним классам
-    /*private String owner; //поле владелец должно быть доступно только классу Pet*/
-    private String type; //поле владелец должно быть доступно только классу Pet
+    static private String type = "Домашнее животное"; //поле владелец должно быть доступно только классу Pet
    String person;
 
     public String getType() {
@@ -32,7 +31,6 @@ public class Pet extends Animal {
     public Pet(String name, int age, String type, String person) {
         this.name = name;
         this.age = age;
-        this.type = "Домашнее животное";
         this.person = person;
     }
 

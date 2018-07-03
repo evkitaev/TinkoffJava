@@ -17,17 +17,17 @@ public class Lynx extends Wild{
         @Override
         public String toString() {
 
-            return MessageFormat.format("Тип: {0}, Порода: {1}, Возраст: {2}", getType(), getBreed(), getAge());
+            return MessageFormat.format("Тип: {0}, Порода: {1}, Возраст: {2}", Wild.type, getBreed(), getAge());
         }
 
         @Override
         public void speak (String say){
-        System.out.println(getType() + " говорит: " + say + "\n");
+        System.out.println(Wild.type + " говорит: " + say + "\n");
     }
 
         @Override
         public void info(){
-            System.out.println("Тип: " + getType() +", "+ "Порода: " + getBreed() + ", " + "Возраст: " + getAge());
+            System.out.println("Тип: " + Wild.type +", "+ "Порода: " + getBreed() + ", " + "Возраст: " + getAge());
         }
 
 
