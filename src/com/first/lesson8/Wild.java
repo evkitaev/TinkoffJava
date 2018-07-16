@@ -1,6 +1,6 @@
 package com.first.lesson8;
 
-public abstract class Wild extends Mammal {
+public abstract class Wild implements Animal {
     static String type = "Дикое животное"; //переделал в статик, что бы проще можно было выводить статичный тип животного в info()
     private int age;
 

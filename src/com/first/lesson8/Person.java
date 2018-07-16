@@ -14,13 +14,12 @@ public class Person {
         this.personName = personName;
     }
 
-    public void getPet(String personName){ //Добавить метод, позволяющий добавлять любого питомца. Тут я что то не могу придумать как это осуществить
-
+    public Pet getPet(){ //Добавить метод, позволяющий добавлять любого питомца. Тут я что то не могу придумать как это осуществить
+    return pet;
     }
 
-    @Override
-    public void getPet(){
-
+    public void setPet(Pet pet){
+        this.pet = pet;
     }
 
     @Override
