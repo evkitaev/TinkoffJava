@@ -4,8 +4,6 @@ package com.first.lesson8;
 Добавить в класс несколько конструкторов (все поля заполняются по умолчанию, указываем только имя и пол, указываем все поля).
 Пустых полей быть не должно.*/
 
-import java.text.MessageFormat;
-
 public class Cat extends Pet {
     private String gen;
     private String breed;
@@ -13,16 +11,17 @@ public class Cat extends Pet {
     private Person person = new Person ("Екатерина");
     Wild wild;
 
-    //Для всех полей добавить геттеры и сеттеры.
     public String getGen() {
         return gen;
     }
-
     public String getBreed() {
         return breed;
     }
     public Person getPerson() {
         return person;
+    }
+    public boolean isFlag() {
+        return flag;
     }
 
     public Cat(String type, String name, int age, String personName, String gen, String breed, boolean flag) {
@@ -40,7 +39,10 @@ public class Cat extends Pet {
         }
     }
 
-    public void takeHome() { //Создать класс Person. В классе Cat при взятии кошки домой заполнять поле владелец.
+    public void takeHome() throws CustomExeption{
+        if (isFlag()){
+            throw new CustomExeption(); //Добавить исключение, при попытке взять домой кота, с флагом "Дома".
+        }
         this.flag = true;
         System.out.println("Владелец: " + getPerson()); //проставление владельца, при заборе домой
 
@@ -52,8 +54,8 @@ public class Cat extends Pet {
             System.out.println("Тип: " + getType() + ", " + "Кличка: " + getName() + ", "+ "Порода: " + getBreed() + ", " + "Возраст: " + getAge() + ", " + "сейчас " + getLocation(flag));
 
         else
-            System.out.println("Тип: " + Wild.type + ", " + "Порода: " + getBreed() + ", " + "Пол: " + getGen() + ", " + "Возраст: " + getAge() + ", " + "Владелец отсутствует," + " сейчас в " + getLocation(flag) + "\n");
-        //как сделать так, чтобы при флаге в котокафе, у нас проставлялся тип из класса Wild (дикое животное, вместо домашнего)? Или здесь уже интефейсами нужно обходиться?
+            System.out.println("Тип: " + getType() + ", " + "Порода: " + getBreed() + ", " + "Пол: " + getGen() + ", " + "Возраст: " + getAge() + ", " + "Владелец отсутствует," + " сейчас в " + getLocation(flag) + "\n");
+
 
     }
 }
