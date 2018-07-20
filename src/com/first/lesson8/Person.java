@@ -20,6 +20,7 @@ public class Person {
 
     public void setPet(Pet pet){
         this.pet = pet;
+        pet.setPerson(personName);
     }
 
     @Override

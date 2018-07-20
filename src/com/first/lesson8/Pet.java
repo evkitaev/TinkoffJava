@@ -28,10 +28,19 @@ public abstract class Pet implements Animal {
         this.age = age;
     }
 
+    public void setPerson(String person) {
+        this.person = person;
+    }
+
     public Pet(String name, int age, String type, String person) {
         this.name = name;
         this.age = age;
         this.person = person;
+    }
+
+    public Pet(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
     public Pet() {
