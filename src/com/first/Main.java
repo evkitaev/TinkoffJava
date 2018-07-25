@@ -7,12 +7,4 @@ package com.first;
 import com.first.lesson8.Cat;
 import com.first.lesson8.CatCafe;
 
-public class Main {
-
-    public static void main(String args []) {
-
-
-
-    }
-
-  }
+public class Main {}
