@@ -1,7 +1,6 @@
 package com.first.lesson8;
 
 import java.text.MessageFormat;
-import java.util.Arrays;
 import java.util.List;
 /*Создать класс CatCafe, добавить поля адрес, массив котов в котокафе и время работы и счетчик котов.
 Добавить конструктор класса. Создать объект кафе и добавить в него котов. Всем котам проставить флаг.*/
@@ -11,7 +10,6 @@ public class CatCafe {
     List<Cat> catList;
     String time;
     int catCount;
-    Cat cat;
 
 
     public String getAddress() {
@@ -26,7 +24,7 @@ public class CatCafe {
         return catList;
     }
 
-    public void setCafeCats(Cat[] cafeCats) {
+    public void setCafeCats(List cafeCats) {
         this.catList = catList;
     }
 
@@ -46,14 +44,6 @@ public class CatCafe {
         this.catCount = catCount;
     }
 
-    public Cat getCat() {
-        return cat;
-    }
-
-    public void setCat(Cat cat) {
-        this.cat = cat;
-    }
-
 
 
     public CatCafe(String address, List<Cat> catList, String time) {
@@ -64,8 +54,7 @@ public class CatCafe {
 
     }
 
-    public void getCatHome(Cat cat) throws CustomExeption {
-        this.cat = cat;
+    public void getCatHome(Cat cat) throws CatAlreadyAtHome {
         cat.takeHome();
         catCount -= 1;
         catList.remove(cat);

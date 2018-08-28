@@ -18,13 +18,13 @@ public class Person {
         this.personName = personName;
     }
 
-    public Pet getPet(){ //Добавить метод, позволяющий добавлять любого питомца. Тут я что то не могу придумать как это осуществить
-    return (Pet) map;
+    public Map <String, Pet> getPetMap(){ //Добавить метод, позволяющий добавлять любого питомца. Тут я что то не могу придумать как это осуществить
+    return map;
     }
 
-    public void setPet(Pet pet){
-        this.map = (Map<String, Pet>) pet;
-        pet.setPerson(personName);
+    public Pet getPetByName (String name){
+     return map.get(name);
+
     }
 
     @Override

@@ -39,9 +39,9 @@ public class Cat extends Pet {
         }
     }
 
-    public void takeHome() throws CustomExeption{
+    public void takeHome() throws CatAlreadyAtHome {
         if (isFlag()){
-            throw new CustomExeption(); //Добавить исключение, при попытке взять домой кота, с флагом "Дома".
+            throw new CatAlreadyAtHome(); //Добавить исключение, при попытке взять домой кота, с флагом "Дома".
         }
         this.flag = true;
         System.out.println("Владелец: " + getPerson()); //проставление владельца, при заборе домой
@@ -58,4 +58,7 @@ public class Cat extends Pet {
 
 
     }
+    public String toString() {
+        return "Тип: " + getType() + ", " + "Кличка: " + getName() + ", "+ "Порода: " + getBreed() + ", " + "Возраст: " + getAge() + ", " + "сейчас " + getLocation(flag);
+    } //причем в классе dog уже так реализовано, не знаю что мне помешало сравнить)
 }
