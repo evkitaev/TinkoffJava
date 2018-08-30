@@ -1,10 +1,14 @@
 package com.first.lesson8;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 //Создать класс Person. В классе Cat при взятии кошки домой заполнять поле владелец.
 public class Person {
     String personName;
-    Pet pet; //В классе Person добавить поле, хранящее питомца.
+    //Pet pet; //В классе Person добавить поле, хранящее питомца.
+    Map<String, Pet> map = new HashMap<String, Pet>();
 
     public String getpersonName() {
         return personName;
@@ -14,12 +18,13 @@ public class Person {
         this.personName = personName;
     }
 
-    public Pet getPet(){ //Добавить метод, позволяющий добавлять любого питомца. Тут я что то не могу придумать как это осуществить
-    return pet;
+    public Map <String, Pet> getPetMap(){ //Добавить метод, позволяющий добавлять любого питомца. Тут я что то не могу придумать как это осуществить
+    return map;
     }
 
-    public void setPet(Pet pet){
-        this.pet = pet;
+    public Pet getPetByName (String name){
+     return map.get(name);
+
     }
 
     @Override
